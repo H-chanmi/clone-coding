@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap"><!--전체묶음용-->
+
+        <span class="hide">영화광고 배너</span>
+        <div class="cgv_ad_top">
+        <a id="bannerLink" href="#">
+            <img id="bannerImage" src="" alt="광고 배너" >
+            <span class="hide">광고이름</span><!--광고 이름 추가-->
+        </a>
+        <div class="btn_ad_close" id="btn_ad_close" onclick="closeBanner()"><!--한번클릭하면 closeBanner실행-->
+            <img src="images/btn_ad_close.png" alt="닫기" >
+        </div>
+        </div>
+
+        <!-- 헤더: utilNav + GNB + searchBox -->
+        <header class="header">
+
+        <h2 class="hide">사용자 편의서비스</h2>
+        <div class="util-box">
+            <div class="util">
+                <h1 class="util__logo"><a href="#"><h1 class="hide">CGV</h1><img src="images/logo.png" alt="CGV로고 이미지" class="util__logo--img">DEEP DIVE SPACE</a></h1>
+                <div class="util__ad"><a href="#"><span class="hide">광고 현대카드 6천 M포인트 사용 / 이벤트 안내페이지로 이동합니다</span></a></div>
+                <ul class="util__box"><span class="hide">유틸리티 메뉴</span>
+                    <li><a href="#" class="util__link"><img src="images/loginPassword.png" alt="자물쇠 아이콘">로그인</a></li>
+                    <li><a href="#" class="util__link"><img src="images/loginJoin.png
+                        " alt="">회원가입</a></li>
+                    <li><a href="#" class="util__link"><img src="images/loginMember.png" alt="">MY CGV</a></li>
+                    <li><a href="#" class="util__link"><img src="images/loginCustomer.png" alt="">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 유틸리티 끝 -->
+
+        
+        <div class="nav-box">
+            <nav class="nav">
+                <h2 class="hide">주요 서비스 안내</h2>
+                <ul class="nav__menu">
+                    <li><a href="#" class="nav__list">영화</a>
+                    <ul class="nav__submenu nav__submenu-first">
+                        <li class="hide"><h3>영화 부가서비스</h3></li>
+                        <li><a href="#" class="submenu__list submenu-name">영화</a></li>
+                        <li><a href="#" class="submenu__list">무비차트</a></li>
+                        <li><a href="#" class="submenu__list">아트하우스</a></li>
+                        <li><a href="#" class="submenu__list">ICECON</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#" class="nav__list">극장</a>
+                        <ul class="nav__submenu nav__submenu-second">
+                            <li class="hide"><h3>극장 부가서비스</h3></li>
+                            <li><a href="#" class="submenu__list submenu-name">극장</a></li>
+                            <li><a href="#" class="submenu__list">CGV극장</a></li>
+                            <li><a href="#" class="submenu__list">특별관</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav__list nav__list--red">예매</a>
+                        <ul class="nav__submenu nav__submenu-third">
+                            <li class="hide"><h3>예매 부가서비스</h3></li>
+                            <li><a href="#" class="submenu__list submenu-name">예매</a></li>
+                            <li><a href="#" class="submenu__list">빠른예매</a></li>
+                            <li><a href="#" class="submenu__list">상영스케줄</a></li>
+                            <li><a href="#" class="submenu__list">English Ticketing</a></li>
+                            <li><a href="#" class="submenu__list">English Schedule</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav__list">스토어</a>
+                        <ul class="nav__submenu nav__submenu-fourth">
+                            <li class="hide"><h3>스토어 부가서비스</h3></li>
+                            <li><a href="#" class="submenu__list submenu-name">스토어</a></li>
+                            <li><a href="#" class="submenu__list">패키지</a></li>
+                            <li><a href="#" class="submenu__list">영화관람권</a></li>
+                            <li><a href="#" class="submenu__list">기프트카드</a></li>
+                            <li><a href="#" class="submenu__list">콤보</a></li>
+                            <li><a href="#" class="submenu__list">팝콘</a></li>
+                            <li><a href="#" class="submenu__list">음료</a></li>
+                            <li><a href="#" class="submenu__list">스낵</a></li>
+                            <li><a href="#" class="submenu__list">플레이존</a></li>
+                            <li><a href="#" class="submenu__list submenu__list-addicon">씨네샵</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav__list">이벤트</a>
+                        <ul class="nav__submenu nav__submenu-fifth">
+                            <li class="hide"><h3>이벤트 부가서비스</h3></li>
+                            <li><a href="#" class="submenu__list submenu-name">이벤트</a></li>
+                            <li><a href="#" class="submenu__list">SPECIAL</a></li>
+                            <li><a href="#" class="submenu__list">영화/예매</a></li>
+                            <li><a href="#" class="submenu__list">맴버십/CLUB</a></li>
+                            <li><a href="#" class="submenu__list">CGV 극장별</a></li>
+                            <li><a href="#" class="submenu__list">제휴할인</a></li>
+                            <li><a href="#" class="submenu__list">당첨자 발표</a></li>
+                            <li><a href="#" class="submenu__list">종료된 이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="nav__list">혜택</a>
+                        <ul class="nav__submenu nav__submenu-sixth">
+                            <li class="hide"><h3>혜택 부가서비스</h3></li>
+                            <li><a href="#" class="submenu__list submenu-name">혜택</a></li>
+                            <li><a href="#" class="submenu__list">CGV 할인정보</a></li>
+                            <li><a href="#" class="submenu__list">CLUB 서비스</a></li>
+                            <li><a href="#" class="submenu__list">VIP 라운지</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="nav__form">
+                    <h2 class="hide">검색창</h2>
+                    <input type="text" class="form__search" placeholder="너의 색" autoComplete="off">
+                    <img src="images/search.png" alt="검색하기" class="form__searchIcon">
+                </div>
+            </nav>
+        </div>
+        <!-- 메뉴 네비게이션과 검색창 끝 -->
+        </header>
+
+        <h2 class="hide">상영예정작 영상 스틸 광고</h2>
+        <div class="movie-box">
+            <div class="movie-screen">
+                <div class="movie__video"><video class="movie__video-video" src="movies/Audrey_1080x608_PC.mp4" autoplay muted playsinline></video>
+            </div>
+                
+                <h3 class="hide">영화 안내</h3>
+                <div class="movie__introbox">
+                <h2 class="movie__introbox-name">세상 참 예쁜 오드리</h2>
+                <h3 class="movie__introbox-plot">한 가족의 특별한 성장통과 <br> 서로의 사랑을 감동적으로 그려낸 영화</h3>
+                   
+                <div class="movie__controlbox">
+                    <button class="movie__controlbox__showmore"><a href="#"><h4 class="hide">해당영화</h4>상세보기</a></button>
+                    <button class="movie__controlbox__control" id="video-control"><h4 class="hide">영상 재생/중지</h4></button>
+                    <button class="movie__controlbox__sound" id="video-sound"><h4 class="hide">영상 소리켜기 / 소리끄기</h4></button>      
+                </div>
+                
+            </div>
+            </div>
+        </div>
+
+<!-- 전체묶음 끝 -->
+</div>
+
+
+<script src="script.js"></script>    
+</body>
+</html>

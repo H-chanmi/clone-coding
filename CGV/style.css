@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* 구글 폰트 연결 - 구글 노토산스(=본고딕)*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: "Noto Sans KR", sans-serif; font-optical-sizing: auto;}
+
+ul{list-style-type: none;}
+a{color: #000; text-decoration: none;}
+
+.hide{ /*웹접근성 클래스*/
+    width: 1px; height: 1px; position: absolute;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0,0 0,0 0);
+}
+
+body { background-color:transparent;}
+
+/*상단 광고배너---------------*/
+.cgv_ad_top { position: relative; width: 980px; height: 80px; margin: 0 auto; }
+.btn_ad_close { position: absolute; right: 10px; top: 10px; cursor: pointer; }
+
+
+
+/* 헤더(유틸리티 네비게이션 + GNB영역 + 검색창)--------------------------------------------------------------- */
+
+.header{
+    position: relative; z-index: 999; height:162px;
+    
+}
+
+
+/*유틸리티 네비게이션--------------------------------------*/
+.util-box{
+    width: 100%; background-color: #fff; border-bottom: 1px solid #eee;
+}
+.util{margin: 0 auto; max-width: 990px; display: flex; padding:28px 0; align-items: center; justify-content: space-between; 
+position: relative;}
+.util__logo a{
+    font-weight: 300; letter-spacing: 6px; font-size: 16px;
+    display: flex; align-items:end;
+}
+.util__logo--img{
+    width: 100%; display:inline-block; width: 117px; height: 53px;
+}
+
+.util__ad a{
+    background-image: url(images/Hcard.png);
+    width: 100%; display: flex; width: 136px; height:39px; 
+    position: absolute; top: 50%; transform: translateY(-50%);
+
+}
+
+.util__box{
+    display: flex; gap: 30px;
+}
+
+.util__link{
+    display: flex; flex-direction: column; align-items: center; font-size: 13px;
+}
+
+.util__link img{
+    width: 36px; height: 36px;
+}
+
+
+/*GNB영역-----------------------------------------------------------*/
+.nav-box{
+    width: 100%; background-color: #fff;
+    position:relative;
+    height: 50px;
+    z-index: 999;
+    transition:height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.nav-box::before{
+    content: '';
+    width: 100%; height: 2px; background-color: #fb4357;
+    position: absolute; top: 48px; z-index: 999;
+}
+
+.nav-box.active{
+    height: 400px;
+}
+
+.nav{
+    position: relative; max-width: 980px; margin: 0 auto;
+}
+
+.nav__menu{
+   display: flex; justify-content: space-between; align-items: center;
+}
+
+.nav__menu>li{position: relative; flex: none; width: 160px;}
+.nav__menu>li>a{
+    position: absolute;
+}
+.nav__menu>li:nth-child(2)>a{left: -80px;}
+.nav__menu>li:nth-child(3)>a{left: -160px;}
+.nav__menu>li:nth-child(4)>a{ left: -240px;}
+.nav__menu>li:nth-child(5)>a{left: -320px;}
+.nav__menu>li:nth-child(6)>a{ left: -400px;}
+
+.nav__list{
+    line-height: 50px; font-weight: 500; display: block; font-size: 16px;
+}
+
+.nav__list--red{
+    color: #fb4357;
+}
+
+.nav__submenu{
+    position: absolute; top:62.5px; width: 160px; 
+    transition:height 0.3s ease-in-out;
+}
+.nav__submenu::after{
+    content: '';
+    width: 2px; height: 250px;
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 10px; right:25px;
+    transition: 0.3s both ease-in-out;
+}
+
+.nav__submenu li{
+    display:block;
+}
+
+.submenu__list{
+    line-height: 30px; color: #666; font-size: 14px; font-weight: 500;
+}
+.submenu__list:hover{
+   text-decoration: underline;
+}
+
+.submenu-name{line-height: 40px; font-weight: 600; color: #000;}
+
+/*검색창----------------------------------*/
+.nav__form{ 
+    position: absolute; right: 0; top: 12px;
+    border: none;
+    border-left:1px solid #cacaca;
+    border-right:1px solid #cacaca;
+    padding: 0 12px;
+    color: #000;
+    display: flex; align-items: center;
+    justify-content: space-between;
+}
+.form__search{
+    background-color: transparent;
+    border: none;
+    color: #000;
+    height: 26px; width: 190px;
+}
+
+.form__search::placeholder{
+    color: #000; font-size: 16px; font-weight: 430;
+}
+
+.form__searchIcon{
+    width: 26px; height: 26px; display: inline-block;
+}
+
+/*상영예정작 영상광고-------------------------------*/
+.movie-box{
+    width: 100%; background-color:#000; 
+    height: 100%;
+}
+
+.movie-screen{
+    position: relative; overflow: hidden;  
+    width: 980px; margin:0 auto; 
+}
+.movie__video{
+    position: relative; overflow: hidden;  
+    width: 980px; margin:0 auto; 
+    height:500px;
+}
+.movie__video::before{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 75%, #000 100%);
+    z-index: 2;
+}
+
+.movie__video>video{
+    width: 100%;
+    height: 100%; transform: scale(1.35);
+}
+
+.movie__introbox{
+    position: absolute;
+    top:150px; left: 0;
+    z-index: 2;
+}
+
+.movie__introbox-name{
+    font-size: 40px; color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.72);
+    text-wrap: nowrap;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.movie__introbox-plot{
+    color: #fff; font-size: 20px; font-weight: 500;
+    line-height: 2rem;
+}
+
+.movie__controlbox{
+    margin-top: 20px; display: flex; align-items: center; gap: 10px;
+}
+.movie__controlbox__showmore{width: 100px; background-color: #cdcdcd; border-radius: 15px; border: none;  position: relative; }
+
+.movie__controlbox__showmore>a{line-height: 30px; font-size: 14px;text-align: left; padding: 5px 30px 5px 18px;}
+
+.movie__controlbox__showmore::after{
+    content: '';
+    position: absolute;
+    background-image: url(images/arrowR_8x13.png);
+    background-repeat: no-repeat;
+    height: 26px; width: 16px; 
+    top:2px; right:12px;
+    display: block;
+    scale: 0.5;
+} 
+
+.movie__controlbox__control, .movie__controlbox__sound{
+    width: 30px; height: 30px; border-radius: 15px;
+    border:1px solid #979797; background:transparent; 
+    position: relative; cursor: pointer;
+}
+
+.movie__controlbox__control{
+    background-image: url(images/pause.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.movie__controlbox__sound{
+    background-image: url(images/soundoff.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+
